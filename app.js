@@ -19,7 +19,8 @@ const displayErr = () => {
 
 const displayMeal = data => {
 	const mealsDiv = document.getElementById('meals');
-	mealsDiv.textContent = '';
+    mealsDiv.textContent = '';
+    document.getElementById('err').textContent = "";
 	data.forEach(meal => {
 		console.log(meal.strMeal);
 		const div = document.createElement('div');
