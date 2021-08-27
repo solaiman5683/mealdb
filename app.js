@@ -28,7 +28,7 @@ const displayMeal = data => {
 		div.innerHTML = `
             <div class="card shadow">
 				<img src="${meal.strMealThumb}" class="card-img-top"/>
-				<div class="card-body">
+				<div class="card-body p-2">
 					<h2 class="card-title">${meal.strMeal}</h2>
 					<p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
                     <a class="btn btn-success" href="${meal.strYoutube}" target="_blank">See recipe video</a>
