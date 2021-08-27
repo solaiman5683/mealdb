@@ -31,6 +31,7 @@ const displayMeal = data => {
 				<div class="card-body">
 					<h2 class="card-title">${meal.strMeal}</h2>
 					<p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
+                    <a class="btn btn-success" href="${meal.strYoutube}" target="_blank">See recipe video</a>
 				</div>
 			</div>
         `;
