@@ -3,13 +3,23 @@ const loadMeal = () => {
 	const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search.value}`;
 	fetch(url)
 		.then(res => res.json())
-		.then(data => displayMeal(data.meals));
+		.then(data => displayMeal(data.meals))
+		.catch(() => {
+			displayErr();
+		});
 	search.value = '';
 };
 
+const displayErr = () => {
+    const errorDiv = document.getElementById('err');
+    errorDiv.innerHTML = `
+        <h2 class="text-danger text-center">Sorry something went wrong or Meal is not available !</h2>
+    `
+}
+
 const displayMeal = data => {
-    const mealsDiv = document.getElementById('meals');
-    mealsDiv.textContent = "";
+	const mealsDiv = document.getElementById('meals');
+	mealsDiv.textContent = '';
 	data.forEach(meal => {
 		console.log(meal.strMeal);
 		const div = document.createElement('div');
