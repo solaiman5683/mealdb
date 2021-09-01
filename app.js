@@ -27,11 +27,15 @@ const displayMeal = data => {
 		div.classList.add('col');
 		div.innerHTML = `
             <div class="card shadow">
-				<img src="${meal.strMealThumb}" class="card-img-top"/>
-				<div class="card-body p-2">
+				<a href="${meal.strMealThumb}" target="_blank"><img src="${
+			meal.strMealThumb
+		}" class="card-img-top"/></a>
+				<div class="card-body">
 					<h2 class="card-title">${meal.strMeal}</h2>
 					<p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
-                    <a class="btn btn-success" href="${meal.strYoutube}" target="_blank">See recipe video</a>
+                    <a class="btn btn-success" href="${
+											meal.strYoutube
+										}" target="_blank">See recipe video</a>
 				</div>
 			</div>
         `;
